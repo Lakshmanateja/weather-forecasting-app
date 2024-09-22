@@ -14,5 +14,5 @@ You may also see any lint errors in the console.
 
 ### Install Dependencies
 
-Axios - "npm install axios"
+Axios - "npm install axios"\
 Material UI - "npm install @mui/icons-material @mui/material @emotion/styled @emotion/react"
