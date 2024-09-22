@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+body {
+    background-color: #d9d9d9; /* Light grey background */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Optional: Set a default font */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 930px;
+    padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.weather-card {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.highlights-card {
+    flex: 0.5;
+    min-width: 250px;
+    align-items: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .weather-card,
+    .highlights-card {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin: 20px 0;
 }
